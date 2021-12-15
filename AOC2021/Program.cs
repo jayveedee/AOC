@@ -29,7 +29,8 @@ namespace AOC2021
             // Console.WriteLine(day4.PartTwo(advancedInput));
 
             Day5 day5 = new Day5();
-            Console.WriteLine(day5.PartOne(basicInput));
+            // Console.WriteLine(day5.PartOne(basicInput));
+            Console.WriteLine(day5.PartTwo(basicInput));
 
             Day10 day10 = new Day10();
             // Console.WriteLine(day10.PartOne(basicInput));
