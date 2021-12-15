@@ -14,6 +14,13 @@ namespace AOC2021
             var basicInput = _scanner.GetBasicInput();
             // var advancedInput = _scanner.GetAdvancedInput();
 
+            Day1 day1 = new Day1();
+            // Console.WriteLine(day1.PartTwo(basicInput));
+
+            Day2 day2 = new Day2();
+            // Console.WriteLine(day2.PartOne(basicInput));
+            // Console.WriteLine(day2.PartTwo(basicInput));
+
             Day3 day3 = new Day3();
             // Console.WriteLine(day3.PartOne(basicInput));
 
@@ -23,6 +30,10 @@ namespace AOC2021
 
             Day5 day5 = new Day5();
             Console.WriteLine(day5.PartOne(basicInput));
+
+            Day10 day10 = new Day10();
+            // Console.WriteLine(day10.PartOne(basicInput));
+            // Console.WriteLine(day10.PartTwo(basicInput)); NOT COMPLETE
         }
     }
 }
