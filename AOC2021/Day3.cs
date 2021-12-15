@@ -7,12 +7,12 @@ namespace AOC2021
     public class Day3
     {
 
-        public string PartOne(List<string> listOfInputs)
+        public string PartOne(List<string> input)
         {
-            var listOfInputsT = Transpose(listOfInputs);
+            var inputT = Transpose(input);
 
             string gammaBit = "", epsilonBit = "";
-            foreach (var bits in listOfInputsT)
+            foreach (var bits in inputT)
             {
                 gammaBit += CalculateFrequency(bits, true);
                 epsilonBit += CalculateFrequency(bits, false);
@@ -24,7 +24,7 @@ namespace AOC2021
             return (gammaRate * epsilonRate).ToString();
         }
 
-        public string PartTwo(List<string> listOfInputs)
+        public string PartTwo(List<string> input)
         {
             return "";
         }
