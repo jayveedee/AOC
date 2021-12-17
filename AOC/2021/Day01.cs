@@ -1,10 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System;
 
-namespace AOC2021
+namespace AOC._2021
 {
-    public class Day1
+    public class Day01
     {
-        public int PartTwo(List<string> input)
+        public int PartOne(string[] input)
+        {
+            var lastNumber = -1;
+            var increaseCounter = 0;
+            foreach (var number in input)
+            {
+                if (lastNumber < Int32.Parse(number) && lastNumber > -1)
+                {
+                    increaseCounter += Int32.Parse(number);
+                }
+                lastNumber = Int32.Parse(number);
+            }
+
+            return increaseCounter;
+        }
+        
+        public int PartTwo(string[] input)
         {
             var resultCounter = 0;
 

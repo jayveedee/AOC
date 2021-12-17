@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace AOC2021.ScannerService
+namespace AOC._2021
 {
-    public class Day2
+    public class Day02
     {
-        public int PartOne(List<string> input, bool hasAim = false)
+        public int PartOne(string[] input, bool hasAim)
         {
             int x = 0, y = 0, aim = 0;
 
@@ -41,7 +40,7 @@ namespace AOC2021.ScannerService
             return x * y;
         }
 
-        public int PartTwo(List<string> input)
+        public int PartTwo(string[] input)
         {
             return PartOne(input, true);
         }

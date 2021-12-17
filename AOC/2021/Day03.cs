@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace AOC2021
+namespace AOC._2021
 {
-    public class Day3
+    public class Day03
     {
 
-        public string PartOne(List<string> input)
+        public int PartOne(string[] input)
         {
             var inputT = Transpose(input);
 
@@ -21,38 +21,37 @@ namespace AOC2021
             var gammaRate = Convert.ToInt32(gammaBit, 2);
             var epsilonRate = Convert.ToInt32(epsilonBit, 2);
 
-            return (gammaRate * epsilonRate).ToString();
+            return gammaRate * epsilonRate;
         }
 
-        public string PartTwo(List<string> input)
+        private string[] Transpose(string[] input)
         {
-            return "";
-        }
-        
-        private List<string> Transpose(List<string> listOfInputs)
-        {
-            List<string> listOfInputsT = new List<string>();
-            var line = listOfInputs[0];
-            for (var i = 0; i < line.Length; i++)
+            var inputT = new string[input[0].Length];
+            for (var i = 0; i < inputT.Length; i++)
             {
-                listOfInputsT.Add("");
-                for (int j = 0; j < listOfInputs.Count; j++)
+                for (var j = 0; j < input.Length; j++)
                 {
-                    listOfInputsT[i] += line[j];
+                    var inputLine = input[j];
+                    inputT[i] += inputLine[i];
                 }
             }
 
-            return listOfInputsT;
+            return inputT;
         }
-        
+
+        public int PartTwo(string[] input)
+        {
+            return 0;
+        }
+
         private string CalculateFrequency(string bits, bool mostCommon)
         {
             var mostCommonBit = bits.GroupBy(x => x).OrderByDescending(x => x.Count()).First().Key;
             if (mostCommon)
             {
-                return mostCommonBit is '1' or '0' ? "1" : "0";
+                return mostCommonBit is '1' ? "1" : "0";
             }
-            return mostCommonBit is not '1' or '0' ? "1" : "0";
+            return mostCommonBit is not '1' ? "1" : "0";
         }
     }
 }

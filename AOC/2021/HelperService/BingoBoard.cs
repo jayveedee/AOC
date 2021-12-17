@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AOC2021.ScannerService
+namespace AOC._2021.HelperService
 {
     public class BingoBoard
     {

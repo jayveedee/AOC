@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using AOC2021.ScannerService;
+using AOC._2021.HelperService;
 
-namespace AOC2021
+namespace AOC._2021
 {
-    public class Day4
+    public class Day04
     {
         public string PartOne(List<string> input)
         {

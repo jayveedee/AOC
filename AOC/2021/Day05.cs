@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AOC2021
+namespace AOC._2021
 {
-    public class Day5
+    public class Day05
     {
         public string PartOne(List<string> input)
         {

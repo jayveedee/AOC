@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AOC2021
+namespace AOC._2021
 {
     public class Day10
     {
