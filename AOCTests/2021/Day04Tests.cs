@@ -6,22 +6,22 @@ using NUnit.Framework;
 
 namespace AOC2021Tests._2021
 {
-    public class Day03Tests : IAOCTests
+    public class Day04Tests : IAOCTests
     {
-        private const int Day = 3, PartOne = 1, PartTwo = 2;
+        private const int Day = 4, PartOne = 1, PartTwo = 2;
         private readonly IInputHandler _inputHandler = new InputHandler();
         
         [Test]
         public void PartOneExample()
         {
             // Arrange
-            var unit = new Day03();
+            var unit = new Day04();
 
             // Act
             var actual = unit.PartOne(_inputHandler.GetInput(Day, PartOne, true));
 
             // Assert
-            Assert.AreEqual(198, actual);
+            Assert.AreEqual(4512, actual);
 
         }
 
@@ -40,13 +40,13 @@ namespace AOC2021Tests._2021
         public void PartTwoExample()
         {
             // Arrange
-            var unit = new Day03();
+            var unit = new Day04();
 
             // Act
             var actual = unit.PartTwo(_inputHandler.GetInput(Day, PartTwo, true));
 
             // Assert
-            Assert.AreEqual(230, actual);
+            Assert.AreEqual(1924, actual);
 
         }
 
@@ -54,14 +54,14 @@ namespace AOC2021Tests._2021
         public void PartTwoActual()
         {
             // Arrange
-            var unit = new Day03();
-
+            var unit = new Day04();
+            
             // Act
             var actual = unit.PartTwo(_inputHandler.GetInput(Day, PartTwo, false));
-
+            
             // Assert
             Console.WriteLine(actual);
-            Assert.AreEqual(2845944, actual);
+            Assert.AreEqual(1284, actual);
 
         }
     }

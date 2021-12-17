@@ -1,32 +1,31 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\fo0391\AppData\Local\JetBrains\Rider2021.2\resharper-host\temp\Rider\vAny\CoverageData\_Advent of Code.958607062\Snapshot\snapshot.utdcvr</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1a8dae9f_002D2b8a_002D4e6b_002D8534_002D01409e9a3c63/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PartOneExample #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	
+	
+	
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5e4c79a6_002Defa7_002D4900_002Dbb35_002D5009ca7c84e1/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PartTwoExample #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests.Day01Test.PartOneExample&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5358f3a3_002De10b_002D4105_002Dbec6_002Db69f636a6c18/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PartOneExample" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests.Day01Test.PartOneExample&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7086e848_002Ddc01_002D4ec5_002D991f_002De421f8507f8b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PartOneExample #6" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day03Tests.PartTwoExample&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day03Tests.PartOneExample&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day03Tests.PartTwoActual&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day04Tests.PartOneExample&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8d150fe4_002D576e_002D4984_002D89f8_002D3b362a3b9b5a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PartOneExample #4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=63daab8d_002Daaa6_002D43dc_002Dacbb_002Df57f06e542f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PartOneExample #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day03Tests.PartOneExample&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day04Tests.PartOneExample&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=a0f4abad_002D0e06_002D40b5_002Dbe52_002D3ff7f5a814de/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PartOneExample #5" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d2bdc6d5_002D9191_002D44fa_002Db346_002Da394b9fe9360/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PartOneExample" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day03Tests.PartOneExample&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day04Tests.PartOneExample&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day04Tests.PartTwoExample&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day04Tests.PartTwoActual&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day05Tests.PartOneExample&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=d5c50cf4_002Db9f0_002D4fe5_002D8da9_002D960f489f164a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="PartOneExample #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::F013D000-8A6E-404B-9430-265E52A612FE::net6.0::AOC2021Tests._2021.Day03Tests.PartOneExample&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
-&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
+	
+	
+	
+	
+	</wpf:ResourceDictionary>

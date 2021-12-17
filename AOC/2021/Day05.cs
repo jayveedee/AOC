@@ -5,17 +5,17 @@ namespace AOC._2021
 {
     public class Day05
     {
-        public string PartOne(List<string> input)
+        public int PartOne(string[] input)
         {
-            return CalculateOverlaps(input, false);
+            return CalculateOverlaps(input);
         }
 
-        public string PartTwo(List<string> input)
+        public int PartTwo(string[] input)
         {
-            return CalculateOverlaps(input, true);
+            return 0;
         }
 
-        private string CalculateOverlaps(List<string> input, bool alsoDiagonal)
+        private int CalculateOverlaps(string[] input)
         {
             var grid = new int[10,10];
             var maxValueCounter = 0;
@@ -25,33 +25,19 @@ namespace AOC._2021
                 var yFrom = Int32.Parse(line.Split()[0].Split(",")[1]);
                 var xTo = Int32.Parse(line.Split()[2].Split(",")[0]);
                 var yTo = Int32.Parse(line.Split()[2].Split(",")[1]);
-
-                var isDiagonal = false;
+                
                 if (xFrom != xTo && yFrom != yTo)
                 {
-                    if (alsoDiagonal)
-                    {
-                        isDiagonal = true;
-                    }
-                    else
-                    {
-                        continue;
-                    }
+                    continue;
                 }
-
-                var angle = Convert.ToInt32(Math.Atan2(yTo - yFrom, xTo - xFrom) * (180 / Math.PI));
-                for (int i = 0; i < GetDistance(xFrom, xTo, yFrom, yTo); i++)
+                
+                for (int i = 0; i < GetDistance(line); i++)
                 {
                     var tempXYValue = 0;
-
-                    var hasTheAngle = angle is 45 or -45 || (angle > 0 ? angle - 180 == -45 : angle + 180 == 45);
+                    
                     if (xFrom == xTo || yFrom == yTo)
                     {
-                        tempXYValue = GetTemporaryXYValue(xFrom, xTo, yFrom, yTo, grid, i, isDiagonal);
-                    }
-                    else if (xFrom != xTo && yFrom != yTo && hasTheAngle)
-                    {
-                        tempXYValue = GetTemporaryXYValue(xFrom, xTo, yFrom, yTo, grid, i, isDiagonal);
+                        tempXYValue = GetTemporaryXYValue(line, grid, i);
                     }
 
                     if (tempXYValue == 2)
@@ -61,11 +47,16 @@ namespace AOC._2021
                 }
             }
 
-            return maxValueCounter.ToString();
+            return maxValueCounter;
         }
 
-        private int GetDistance(int xFrom, int xTo, int yFrom, int yTo)
+        private int GetDistance(string line)
         {
+            var xFrom = Int32.Parse(line.Split()[0].Split(",")[0]);
+            var yFrom = Int32.Parse(line.Split()[0].Split(",")[1]);
+            var xTo = Int32.Parse(line.Split()[2].Split(",")[0]);
+            var yTo = Int32.Parse(line.Split()[2].Split(",")[1]);
+            
             // Vertical / Horizontal
             if (xFrom == xTo || yFrom == yTo)
             {
@@ -87,36 +78,34 @@ namespace AOC._2021
             return xDiff == yDiff ? xDiff : 0;
         }
 
-        private int GetTemporaryXYValue(int xFrom, int xTo, int yFrom, int yTo, int[,] grid, int i, bool isDiagonal)
+        private int GetTemporaryXYValue(string line, int[,] grid, int i)
         {
-            int tempXYValue;
-            if (xFrom > xTo || yFrom > yTo)
+            var xFrom = Int32.Parse(line.Split()[0].Split(",")[0]);
+            var yFrom = Int32.Parse(line.Split()[0].Split(",")[1]);
+            var xTo = Int32.Parse(line.Split()[2].Split(",")[0]);
+            var yTo = Int32.Parse(line.Split()[2].Split(",")[1]);
+            
+            
+            
+            
+            if (xFromBigger || yFromBigger)
             {
-                tempXYValue = GetXYValue(grid, xTo, xFrom, i, yTo, yFrom, isDiagonal);
+                return GetXYValue(grid, xTo, xFrom, i, yTo, yFrom);
             }
             else
             {
-                tempXYValue = GetXYValue(grid, xFrom, xTo, i, yFrom, yTo, isDiagonal);
+                return GetXYValue(grid, xFrom, xTo, i, yFrom, yTo);
             }
-
-            return tempXYValue;
         }
 
-        private int GetXYValue(int[,] grid, int xFrom, int xTo, int i, int yFrom, int yTo, bool isDiagonal)
+        private int GetXYValue(int[,] grid, int xFrom, int xTo, int i, int yFrom, int yTo)
         {
-            return grid[GetXYPos(xFrom, xTo, i, isDiagonal), GetXYPos(yFrom, yTo, i, isDiagonal)] += 1;
+            return grid[GetXYPos(xFrom, xTo, i), GetXYPos(yFrom, yTo, i)] += 1;
         }
 
-        private int GetXYPos(int from, int to, int i, bool isDiagonal)
+        private int GetXYPos(int from, int to, int i)
         {
-            if (isDiagonal)
-            {
-                return from > to ? from - i : from == to ? from : from + i;
-            }
-            else
-            {
-                return from == to ? from : i + from;
-            }
+            return from == to ? from : i + from;
         }
     }
 }

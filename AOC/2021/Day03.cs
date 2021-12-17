@@ -9,19 +9,58 @@ namespace AOC._2021
 
         public int PartOne(string[] input)
         {
-            var inputT = Transpose(input);
+            return CalculateBits(Transpose(input));
+        }
 
+        public int PartTwo(string[] input)
+        {
+            var oxyRating = CalculateRatingRecursion(input, true, 0);
+            var scrubRating = CalculateRatingRecursion(input, false, 0);
+            
+            return Convert.ToInt32(oxyRating, 2) * Convert.ToInt32(scrubRating, 2);
+        }
+
+        private int CalculateBits(string[] inputT)
+        {
             string gammaBit = "", epsilonBit = "";
-            foreach (var bits in inputT)
+
+            foreach (var bitsT in inputT)
             {
-                gammaBit += CalculateFrequency(bits, true);
-                epsilonBit += CalculateFrequency(bits, false);
+                var mostCommonBit = CalculateFrequency(bitsT, true);
+                var mostUnCommonBit = CalculateFrequency(bitsT, false);
+
+                gammaBit += mostCommonBit;
+                epsilonBit += mostUnCommonBit;
+            }
+            
+            return Convert.ToInt32(gammaBit, 2) * Convert.ToInt32(epsilonBit, 2);
+        }
+
+        private string CalculateRatingRecursion(string[] input, bool isMostCommon, int bitsToEval)
+        {
+            if (input.Length == 1)
+            {
+                return input[0];
+            }
+            
+            var inputT = Transpose(input);
+            var bitsT = inputT[bitsToEval];
+            
+            var mostCommonBit = CalculateFrequency(bitsT, true);
+            var mostUnCommonBit = CalculateFrequency(bitsT, false);
+
+            var filteredInputList = new List<string>();
+            foreach (var bits in input)
+            {
+                var bitEval = isMostCommon ? mostCommonBit : mostUnCommonBit;
+                if (bitEval[0] == bits[bitsToEval])
+                {
+                    filteredInputList.Add(bits);
+                }
             }
 
-            var gammaRate = Convert.ToInt32(gammaBit, 2);
-            var epsilonRate = Convert.ToInt32(epsilonBit, 2);
-
-            return gammaRate * epsilonRate;
+            bitsToEval++;
+            return CalculateRatingRecursion(filteredInputList.ToArray(), isMostCommon, bitsToEval);
         }
 
         private string[] Transpose(string[] input)
@@ -29,9 +68,8 @@ namespace AOC._2021
             var inputT = new string[input[0].Length];
             for (var i = 0; i < inputT.Length; i++)
             {
-                for (var j = 0; j < input.Length; j++)
+                foreach (var inputLine in input)
                 {
-                    var inputLine = input[j];
                     inputT[i] += inputLine[i];
                 }
             }
@@ -39,14 +77,21 @@ namespace AOC._2021
             return inputT;
         }
 
-        public int PartTwo(string[] input)
-        {
-            return 0;
-        }
-
         private string CalculateFrequency(string bits, bool mostCommon)
         {
-            var mostCommonBit = bits.GroupBy(x => x).OrderByDescending(x => x.Count()).First().Key;
+            int counter0 = 0, counter1 = 0;
+            foreach (var bit in bits)
+            {
+                if (bit == '0')
+                {
+                    counter0++;
+                }
+                else
+                {
+                    counter1++;
+                }
+            }
+            var mostCommonBit = counter0 == counter1 ? '1' : (counter0 > counter1 ? '0' : '1');
             if (mostCommon)
             {
                 return mostCommonBit is '1' ? "1" : "0";

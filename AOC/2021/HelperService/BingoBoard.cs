@@ -14,7 +14,7 @@ namespace AOC._2021.HelperService
             _column = column;
         }
 
-        public static BingoBoard?[] Build(List<string> input, int numberOfBoards, int numberOfMembers)
+        public static BingoBoard?[] Build(string[] input, int numberOfBoards, int numberOfMembers)
         {
             var bingoBoards = new BingoBoard?[numberOfBoards];
             for (int i = 0; i < numberOfBoards; i++)
@@ -78,7 +78,7 @@ namespace AOC._2021.HelperService
             return false;
         }
 
-        public string CalculatePoints(string bingoNumber)
+        public int CalculatePoints(string bingoNumber)
         {
             var unMarked = 0;
             foreach (var row in _row)
@@ -92,7 +92,7 @@ namespace AOC._2021.HelperService
                 }
             }
 
-            return (unMarked * Int32.Parse(bingoNumber)).ToString();
+            return unMarked * Int32.Parse(bingoNumber);
         }
 
         private class BingoMember

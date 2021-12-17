@@ -6,23 +6,23 @@ namespace AOC._2021
 {
     public class Day04
     {
-        public string PartOne(List<string> input)
+        public int PartOne(string[] input)
         {
             var bingoNumbers = input[0].Split(",", StringSplitOptions.RemoveEmptyEntries);
-            var bingoBoards = BingoBoard.Build(input, (input.Count - 1) / 5, 5);
+            var bingoBoards = BingoBoard.Build(input, (input.Length - 1) / 5, 5);
 
             return PlayBingo(bingoNumbers, bingoBoards, false);
         }
 
-        public string PartTwo(List<string> input)
+        public int PartTwo(string[] input)
         {
             var bingoNumbers = input[0].Split(",", StringSplitOptions.RemoveEmptyEntries);
-            var bingoBoards = BingoBoard.Build(input, (input.Count - 1) / 5, 5);
+            var bingoBoards = BingoBoard.Build(input, (input.Length - 1) / 5, 5);
             
             return PlayBingo(bingoNumbers, bingoBoards, true);
         }
 
-        private string PlayBingo(string[] bingoNumbers, BingoBoard?[] bingoBoards, bool winLast)
+        private int PlayBingo(string[] bingoNumbers, BingoBoard?[] bingoBoards, bool winLast)
         {
             foreach (var bingoNumber in bingoNumbers)
             {
@@ -48,7 +48,7 @@ namespace AOC._2021
                 }
             }
 
-            return "";
+            return 0;
         }
 
         private int CountWonBingoBoards(BingoBoard?[] bingoBoards)

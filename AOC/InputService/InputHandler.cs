@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Linq;
 
 namespace AOC.InputService
 {
@@ -17,7 +17,8 @@ namespace AOC.InputService
 
         public string[] GetInput(int day, int part, bool isExample)
         {
-            return System.IO.File.ReadAllLines(GetPath(day, part, isExample));
+            var input = System.IO.File.ReadAllLines(GetPath(day, part, isExample));
+            return input.Where(line => !String.IsNullOrEmpty(line)).ToArray();
         }
 
         private string GetPath(int day, int part, bool isExample)
