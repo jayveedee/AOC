@@ -1,4 +1,5 @@
-﻿using AOC;
+﻿using System;
+using AOC;
 using AOC._2021;
 using AOC.InputService;
 using NUnit.Framework;
@@ -39,10 +40,13 @@ namespace AOC2021Tests._2021
         public void PartTwoExample()
         {
             // Arrange
-            
+            var unit = new Day05();
+
             // Act
-            
+            var actual = unit.PartTwo(_inputHandler.GetInput(Day, PartTwo, true), true);
+
             // Assert
+            Assert.AreEqual(12, actual);
 
         }
 
@@ -50,10 +54,13 @@ namespace AOC2021Tests._2021
         public void PartTwoActual()
         {
             // Arrange
-            
+            var unit = new Day05();
+
             // Act
-            
+            var actual = unit.PartTwo(_inputHandler.GetInput(Day, PartTwo, false), false);
+
             // Assert
+            Console.WriteLine(actual);
 
         }
     }

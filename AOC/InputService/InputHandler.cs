@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 
 namespace AOC.InputService
@@ -11,13 +12,20 @@ namespace AOC.InputService
     
     public class InputHandler : IInputHandler
     {
-        private readonly string _startPath = @"C:\Users\fo0391\RiderProjects\AOC\AOC\2021\Input\";
-        private readonly string _examplePath = "example";
-        private readonly string _extPath = ".txt";
+        private readonly string _startPath;
+        private readonly string _examplePath;
+        private readonly string _extPath;
+
+        public InputHandler()
+        {
+            _startPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.Parent.FullName + @"\AOC\2021\Input\";
+            _examplePath = "example";
+            _extPath = ".txt";
+        }
 
         public string[] GetInput(int day, int part, bool isExample)
         {
-            var input = System.IO.File.ReadAllLines(GetPath(day, part, isExample));
+            var input = File.ReadAllLines(GetPath(day, part, isExample));
             return input.Where(line => !String.IsNullOrEmpty(line)).ToArray();
         }
 
