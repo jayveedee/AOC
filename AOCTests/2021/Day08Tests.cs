@@ -1,16 +1,14 @@
 ﻿using System;
 using AOC;
 using AOC._2021;
-using AOC.InputService;
 using NUnit.Framework;
 
 namespace AOC2021Tests._2021
 {
-    public class Day08Tests : IAOCTests
+    public class Day08Tests : Extension, IAOCTests
     {
         private const int Day = 8, PartOne = 1, PartTwo = 2;
-        private readonly IInputHandler _inputHandler = new InputHandler();
-        
+
         [Test]
         public void PartOneExample()
         {
@@ -18,7 +16,7 @@ namespace AOC2021Tests._2021
             var unit = new Day08();
 
             // Act
-            var actual = unit.PartOne(_inputHandler.GetInput(Day, PartOne, true));
+            var actual = unit.PartOne(InputHandler.GetInput(Day, PartOne, true));
 
             // Assert
             Assert.AreEqual(26, actual);
@@ -32,7 +30,7 @@ namespace AOC2021Tests._2021
             var unit = new Day08();
             
             // Act
-            var actual = unit.PartOne(_inputHandler.GetInput(Day, PartOne, false));
+            var actual = unit.PartOne(InputHandler.GetInput(Day, PartOne, false));
             
             // Assert
             Console.WriteLine(actual);
@@ -45,7 +43,7 @@ namespace AOC2021Tests._2021
             var unit = new Day08();
 
             // Act
-            var actual = unit.PartTwo(_inputHandler.GetInput(Day, PartTwo, true));
+            var actual = unit.PartTwo(InputHandler.GetInput(Day, PartTwo, true));
 
             // Assert
             Assert.AreEqual(5353, actual);
