@@ -7,7 +7,7 @@ namespace AOC2021Tests._2021
 {
     public class Day01Tests : Extension, IAOCTests
     {
-        private const int Day = 1, PartOne = 1, PartTwo = 2;
+        private const int Day = 1;
 
         [Test]
         public void PartOneExample()

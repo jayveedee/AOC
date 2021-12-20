@@ -5,21 +5,21 @@ using NUnit.Framework;
 
 namespace AOC2021Tests._2021
 {
-    public class Day08Tests : Extension, IAOCTests
+    public class Day20Tests : Extension, IAOCTests
     {
-        private const int Day = 8;
+        private readonly int Day = 20;
 
         [Test]
         public void PartOneExample()
         {
             // Arrange
-            var unit = new Day08();
+            var unit = new Day20();
 
             // Act
             var actual = unit.PartOne(InputHandler.GetInput(Day, PartOne, true));
 
             // Assert
-            Assert.AreEqual(26, actual);
+            Assert.AreEqual(35, actual);
 
         }
 
@@ -27,11 +27,11 @@ namespace AOC2021Tests._2021
         public void PartOneActual()
         {
             // Arrange
-            var unit = new Day08();
-            
+            var unit = new Day20();
+
             // Act
             var actual = unit.PartOne(InputHandler.GetInput(Day, PartOne, false));
-            
+
             // Assert
             Console.WriteLine(actual);
         }
@@ -39,15 +39,7 @@ namespace AOC2021Tests._2021
         [Test]
         public void PartTwoExample()
         {
-            // Arrange
-            var unit = new Day08();
-
-            // Act
-            var actual = unit.PartTwo(InputHandler.GetInput(Day, PartTwo, true));
-
-            // Assert
-            Assert.AreEqual(5353, actual);
-
+            throw new System.NotImplementedException();
         }
 
         [Test]
