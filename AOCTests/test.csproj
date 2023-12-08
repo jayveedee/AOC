@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\AOC\AOC.csproj" />
+      <ProjectReference Include="..\AOC\src.csproj" />
     </ItemGroup>
 
 </Project>

@@ -7,4 +7,12 @@
         <LangVersion>preview</LangVersion>
     </PropertyGroup>
 
+    <ItemGroup>
+      <EditorConfigFiles Remove="C:\Users\fo0391\source\repos\Advent-of-Code\AOC\.editorconfig" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="C:\Users\fo0391\source\repos\Advent-of-Code\AOC\.editorconfig" />
+    </ItemGroup>
+
 </Project>
