@@ -3,7 +3,7 @@ using AOC;
 using AOC._2021;
 using NUnit.Framework;
 
-namespace AOC2021Tests._2021
+namespace test._2021
 {
     public class Day01Tests : Extension, IAOCTests
     {

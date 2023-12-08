@@ -4,7 +4,7 @@ using AOC._2021;
 using AOC.InputService;
 using NUnit.Framework;
 
-namespace AOC2021Tests._2021
+namespace test._2021
 {
     public class Day07Tests : Extension, IAOCTests
     {

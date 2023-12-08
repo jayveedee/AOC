@@ -71,7 +71,7 @@
                 var cube = new ReactorCube(int.Parse(xRange[0]) + i, int.Parse(yRange[0]) + k, int.Parse(zRange[0]) + j, isOn == "on");
                 if (reactorCubes.Contains(cube))
                 {
-                    reactorCubes.Find(cube)
+                    //reactorCubes.Find(cube);
                 }
             }
 

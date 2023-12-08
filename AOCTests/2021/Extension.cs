@@ -1,6 +1,6 @@
 ﻿using AOC.InputService;
 
-namespace AOC2021Tests._2021
+namespace test._2021
 {
     public class Extension
     {
