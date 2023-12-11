@@ -18,7 +18,7 @@ namespace test_2023
 
             // Assert
             Console.WriteLine(actual);
-            //Assert.AreEqual(142, actual);
+            Assert.AreEqual(53651, actual);
         }
 
         [Test]
@@ -37,13 +37,20 @@ namespace test_2023
         [Test]
         public void PartTwoActual()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         [Test]
         public void PartTwoExample()
         {
-            throw new System.NotImplementedException();
+            // Arrange
+            var unit = new D1();
+
+            // Act
+            var actual = unit.P2(InputHandler.GetInput(1, PartTwo, true));
+
+            // Assert
+            Assert.AreEqual(281, actual);
         }
     }
 }
