@@ -44,7 +44,7 @@ namespace test_2023
             var actual = unit.P2(InputHandler.GetInput(1, PartTwo));
 
             // Assert
-            Assert.AreEqual(281, actual);
+            Assert.AreEqual(53894, actual);
         }
 
         [Test]
