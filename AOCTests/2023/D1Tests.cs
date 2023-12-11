@@ -37,7 +37,14 @@ namespace test_2023
         [Test]
         public void PartTwoActual()
         {
-            
+            // Arrange
+            var unit = new D1();
+
+            // Act
+            var actual = unit.P2(InputHandler.GetInput(1, PartTwo));
+
+            // Assert
+            Assert.AreEqual(281, actual);
         }
 
         [Test]

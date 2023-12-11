@@ -67,6 +67,11 @@ public class D1 : IAdventOfCode
             }
         }
 
+        if (line == "ddgjgcrssevensix37twooneightgt")
+        {
+            string test = "";
+        }
+
         // Start from right side
         for (int i = line.Length - 1; i >= 0; i--)
         {
@@ -86,6 +91,7 @@ public class D1 : IAdventOfCode
             }
         }
 
+        Console.WriteLine(firstNumber + " " + lastNumber);
         return int.Parse(firstNumber + lastNumber);
     }
 
@@ -93,20 +99,43 @@ public class D1 : IAdventOfCode
     {
         string word = "";
         string? numberWord = "";
-        for (int i = startIndex; i < line.Length; i++)
+
+        if (!isReversed)
         {
-            if (char.IsLetter(line[i]))
+            for (int i = startIndex; i < line.Length; i++)
             {
-                word += line[i];
-                numberWord = CheckIfIsWord(word, isReversed);
-                if (numberWord != null)
+                if (char.IsLetter(line[i]))
                 {
-                    return int.Parse(numberWord);
+                    word += line[i];
+                    numberWord = CheckIfIsWord(word, false);
+                    if (numberWord != null)
+                    {
+                        return int.Parse(numberWord);
+                    }
+                }
+                else
+                {
+                    break;
                 }
             }
-            else
+        }
+        else
+        {
+            for (int i = startIndex; i >= 0; i--)
             {
-                break;
+                if (char.IsLetter(line[i]))
+                {
+                    word += line[i];
+                    numberWord = CheckIfIsWord(word, true);
+                    if (numberWord != null)
+                    {
+                        return int.Parse(numberWord);
+                    }
+                }
+                else
+                {
+                    break;
+                }
             }
         }
 
@@ -126,7 +155,8 @@ public class D1 : IAdventOfCode
             {
                 char[] wordChar = word.ToCharArray();
                 Array.Reverse(wordChar);
-                numberWord = "" + ListOfNumberWords[wordChar.ToString().ToLower()];
+               
+                numberWord = "" + ListOfNumberWords[new string(wordChar).ToLower()];
             }
         }
         catch (Exception)
